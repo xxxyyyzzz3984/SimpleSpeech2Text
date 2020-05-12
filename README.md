@@ -4,7 +4,9 @@
 ## 运行方法
 
 ### 运行之前
-设置好科大讯飞APPID、APIKEY和APISecret
+1. 用python3运行
+2. 在ServerInteract.py中设置好科大讯飞APPID、APIKEY和APISecret
+3. 安装好必须的dependencies包括pyaudio、websocket-client、FFmpeg和noisereduce
 
 ### 正式运行
 1. 先开始录音

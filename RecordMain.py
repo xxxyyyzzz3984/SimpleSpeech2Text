@@ -2,7 +2,7 @@ import datetime
 from sys import byteorder
 from array import array
 from struct import pack
-
+import numpy
 import pyaudio
 import wave
 from bcolors import bcolors
@@ -11,7 +11,7 @@ THRESHOLD = 500
 CHUNK_SIZE = 1024
 FORMAT = pyaudio.paInt16
 RATE = 16000
-DURATION = 100 #seconds
+DURATION = 120 #seconds
 SoundWavDir = "./wav/"
 SoundWavFileCount = 1
 
@@ -91,8 +91,6 @@ def record(duration):
     p.terminate()
 
     r = normalize(r)
-    # r = trim(r)
-    # r = add_silence(r, 0.5)
     return sample_width, r
 
 def record_to_file(path, duration):
